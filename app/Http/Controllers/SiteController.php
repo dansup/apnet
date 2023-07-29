@@ -27,4 +27,11 @@ class SiteController extends Controller
             ->withQueryString();
         return view('welcome', compact('instances'));
     }
+
+    public function show(Request $request, $domain)
+    {
+        $instance = Instance::where('domain', $domain)->firstOrFail();
+
+        return view('show', compact('instance'));
+    }
 }

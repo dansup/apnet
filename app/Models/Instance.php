@@ -14,4 +14,14 @@ class Instance extends Model
     protected $casts = [
         'last_seen_at' => 'datetime'
     ];
+
+    public function url()
+    {
+        return url('/instance/'. $this->domain);
+    }
+
+    public function fedidbUrl()
+    {
+        return 'https://fedidb.org/network/instance/' . $this->domain;
+    }
 }

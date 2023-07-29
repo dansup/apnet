@@ -24,15 +24,15 @@
                   <tbody>
                     @foreach($instances as $instance)
                     <tr>
-                      <th scope="row" class="fw-bold"><a href="https://{{ $instance->domain }}" rel="nofollow">{{ $instance->domain }}</a></th>
+                      <th scope="row" class="fw-bold"><a href="{{ $instance->url() }}">{{ $instance->domain }}</a></th>
                       @if($instance->software)
                       <td class="small"><a href="?software={{ $instance->software }}">{{$instance->software}}</a></td>
                       @else
                       <td class="small">{{ $instance->software }}</td>
                       @endif
-                      <td class="small">{{ $instance->user_count }}</td>
-                      <td class="small">{{ $instance->status_count }}</td>
-                      <td class="small">{{ $instance->last_seen_at }}</td>
+                      <td class="small" data-count="{{ $instance->user_count }}">{{ $instance->user_count }}</td>
+                      <td class="small" data-count="{{ $instance->status_count }}">{{ $instance->status_count }}</td>
+                      <td class="small">{{ $instance->last_seen_at->diffForHumans() }}</td>
                     </tr>
                     @endforeach
                   </tbody>

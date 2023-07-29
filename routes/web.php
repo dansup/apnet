@@ -14,3 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [App\Http\Controllers\SiteController::class, 'index']);
+Route::get('/instance/{domain}', [App\Http\Controllers\SiteController::class, 'show']);
