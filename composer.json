@@ -3,7 +3,7 @@
     "type": "project",
     "description": "A minimal ActivityPub network directory, powered by a curated SQLite database provided by FediDB",
     "keywords": ["laravel", "activitypub", "fediverse", "pixelfed", "mastodon"],
-    "license": "AGPL",
+    "license": "AGPL-3.0-only",
     "require": {
         "php": "^8.1",
         "guzzlehttp/guzzle": "^7.2",
