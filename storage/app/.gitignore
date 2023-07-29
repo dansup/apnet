@@ -1,3 +1,4 @@
 *
 !public/
 !.gitignore
+!fedidb_public.db
